@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <div class="block">
+
+    </div> -->
+
+
+    <!-- <div class="elem">
+        <img src="photo.jpg" alt="photo">
+        <div class="content">
+            <h2 class="heading">Lorem, ipsum dolor.</h2>
+            <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, repudiandae.</p>
+        </div>
+    </div> -->
+
+    <!-- <div class="item">
+        <div class="elem">
+            <div class="info">
+                <h2 class="subtitle">Lorem, ipsum dolor.</h2>
+            </div>
+        </div>
+    </div> -->
+
+    <form action="#">
+        <input type="text">
+        <button class="btn">Отправить</button>
+    </form>
+
+    <script>
+        const btn = document.querySelector('.btn');
+        console.log(btn);
+        btn.addEventListener("click",function () {
+            const inpt = btn.previousElementSibling;
+            console.log(inpt);
+            if(!inpt.value){
+                const h2El = document.createElement('h2');
+                h2El.textContent = "Вы не заполнили поле ввода";
+                //inpt.
+                btn.parentElement.appendChild(h2El);
+                inpt.style.border = '1px solid red';
+            }
+        });
+
+        // let Elem = document.querySelector('.subtitle');
+        // console.log(Elem);
+        // while(Elem.parentElement){
+        //     Elem = Elem.parentElement;
+        //     console.log(Elem);
+        // }
+
+        // const pEl = document.querySelector('.text');
+        // console.log(pEl);
+        // const h2El = pEl.previousElementSibling;
+        // console.log(h2El);
+        // console.log(h2El.parentElement);
+        // const img = document.querySelector('img');
+        // console.log(img.src);
+        // console.log(img.parentElement);
+       
+        // const divElement = document.querySelector('.block');
+        // console.log(divElement);
+        // const divIn = document.createElement('div');
+        // divIn.textContent = "Элемент внутри";
+        // divIn.style.border = '1px solid black';
+
+        // divIn.style.gap = '16px';
+        // divIn.style.color = 'blue';
+        // divIn.setAttribute('class','item_1');
+        // divElement.appendChild(divIn);
+    </script>
+</body>
+</html>
